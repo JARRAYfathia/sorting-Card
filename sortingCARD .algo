@@ -1,0 +1,15 @@
+ALGORITHM Sorting_card
+VAR
+    arr: ARRAY_OF_INTEGER [50];
+    i,j, aux: INTEGER;
+BEGIN
+    FOR i FROM 1 TO arr.length-1 STEP step  DO
+        aux = arr[i];
+        j=j-1;
+    WHILE (j>=0 and arr[j]> aux ) DO
+        arr[j+1] = arr[j];
+        j=j-1;
+    END_WHILE    
+    arr[j+1] = aux;
+    END_FOR
+END
